@@ -46,7 +46,6 @@ quizLoop:
 			}
 		}
 	}
-
 }
 
 // Prints custom error message and exits the program
