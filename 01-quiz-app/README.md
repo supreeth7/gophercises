@@ -24,7 +24,8 @@
 
 ```
 
-### Binary
+### Instructions
 
 - Use the ```go build``` command to generate the ```01-quiz-app``` binary file in the current directory.
+- Run```./01-quiz-app``` in your terminal to run the program with its default flags.
 
