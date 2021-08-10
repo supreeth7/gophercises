@@ -17,6 +17,21 @@ func main() {
 	mapHandler := handler.MapHandler(pathsToUrls, mux)
 	fmt.Println("Listening on port: 8080")
 	http.ListenAndServe(":8080", mapHandler)
+
+	yaml := `
+	- path: /quiz
+	  url: https://github.com/supreeth7/gophercises/tree/master/01-quiz-app
+	- path: /profile
+	  url: https://github.com/supreeth7
+	`
+
+	yamlHandler, err := handler.YAMLHandler([]byte(yaml), mapHandler)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("Starting the server on :8080")
+	http.ListenAndServe(":8080", yamlHandler)
+
 }
 
 func defaultMux() *http.ServeMux {
