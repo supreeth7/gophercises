@@ -19,10 +19,10 @@ func main() {
 	http.ListenAndServe(":8080", mapHandler)
 
 	yaml := `
-	- path: /quiz
-	  url: https://github.com/supreeth7/gophercises/tree/master/01-quiz-app
-	- path: /profile
-	  url: https://github.com/supreeth7
+	- path: /google
+	  url: https://www.google.com/
+	- path: /rh
+	  url: https://www.redhat.com/
 	`
 
 	yamlHandler, err := handler.YAMLHandler([]byte(yaml), mapHandler)
